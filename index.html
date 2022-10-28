@@ -19,7 +19,7 @@
 
         <ul v-if="tasks.length>0">
             <li v-for="(task, i) in tasks">
-                <span :class="{ barred: !task.done }">{{task.text}}</span><span v-on:click="taskDone(i)"> X</span>
+                <span :class="{ barred: task.done }">{{task.text}}</span><span v-on:click="taskDone(i)"> X</span>
             </li>
         </ul>
         <p v-else>Congratulations</p>

@@ -6,11 +6,11 @@ createApp({
         newTask: "",
         tasks: [
           {text: "Task1",
-          done: true},
+          done: false},
           {text: "Task2",
-          done: true},
+          done: false},
           {text: "Task3",
-          done: true},
+          done: false},
         ],
 
         taskTooShort: false,
@@ -19,7 +19,7 @@ createApp({
   methods: {
     createTask() {
         if(this.newTask.length >=5){
-        this.tasks.unshift(this.newTask)
+        this.tasks.unshift({text:this.newTask, done:false})
         this.newTask = ""
         this.taskTooShort = false
         } else {
