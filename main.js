@@ -4,18 +4,26 @@ createApp({
   data() {
     return {
         newTask: "",
+
         tasks: [
-          {text: "Task1",
-          done: false},
-          {text: "Task2",
-          done: false},
-          {text: "Task3",
-          done: false},
+          {
+            text: "Task1",
+            done: false
+          },
+          {
+            text: "Task2",
+            done: false
+          },
+          {
+            text: "Task3",
+            done: false
+          },
         ],
 
         taskTooShort: false,
     }
   },
+  
   methods: {
     createTask() {
         if(this.newTask.length >=5){
